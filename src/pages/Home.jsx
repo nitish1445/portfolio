@@ -64,23 +64,24 @@ const Home = () => {
 
           {/* Buttons */}
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+            {/* Primary */}
             <Link
               to="/projects"
-              className="flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-7 py-3 lg:py-2 font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-glow"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-background transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_3px_9px_rgba(245,158,11,0.18)]"
             >
-              View Projects
-              <FaArrowRight />
+              <span>View Projects</span>
+              <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1" />
             </Link>
 
-            <a
-              href={resume}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center justify-center gap-2 rounded-full border border-border px-7 py-3 lg:py-2 font-medium text-white transition-all duration-300 hover:border-accent hover:text-accent-light"
+            {/* Secondary */}
+            <Link
+              to="/about"
+              className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/10 bg-white/5 px-7 py-3 text-sm font-medium text-text transition-all duration-300 backdrop-blur-md hover:border-accent/40 hover:bg-white/10 hover:text-accent"
             >
-              <HiOutlineDownload />
-              Resume
-            </a>
+              <span>About Me</span>
+
+              <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
 
           {/* Social */}

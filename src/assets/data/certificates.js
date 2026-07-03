@@ -1,3 +1,8 @@
+import java from "../resume/Java.png";
+import iot from "../resume/iot.png";
+import cloudComputing from "../resume/cloudComputing.png";
+import meshmerize from "../resume/meshmerize.png";
+
 const certificates = [
   {
     id: 1,
@@ -5,7 +10,7 @@ const certificates = [
     issuer: "RICR Bhopal",
     category: "Web Development",
     date: "Feb 2026",
-    link: null,
+    photo: null,
   },
   {
     id: 2,
@@ -13,7 +18,7 @@ const certificates = [
     issuer: "NPTEL",
     category: "Silver",
     date: "Nov 2025",
-    link: "https://drive.google.com/file/d/1-Zv8w2aECLK17bxzPw3d3QSrgSfdY1df/preview",
+    photo: java,
     
   },
   {
@@ -22,7 +27,7 @@ const certificates = [
     issuer: "NPTEL",
     category: "Successful Completion",
     date: "May 2025",
-    link: "https://drive.google.com/file/d/1GCyoqe7dVNM-jDmOV2VxDw2RBwbhfm1o/preview",
+    photo: cloudComputing,
    
   },
   {
@@ -31,7 +36,7 @@ const certificates = [
     issuer: "IIT Bombay - Techfest",
     category: "3rd Winner",
     date: "Sept 2024",
-    link: "https://drive.google.com/file/d/1rES4GBFHWg_m38oKUIsyCuHtuEXxd-9n/preview",
+    photo: meshmerize,
    
   },
   {
@@ -40,7 +45,7 @@ const certificates = [
     issuer: "NPTEL",
     category: "Successful Completion",
     date: "Nov 2024",
-    link: "https://drive.google.com/file/d/1DeoTSYIDLdtwq7-sapQqR3QMeersOsr9/preview",
+    photo: iot,
     
   },
 ];

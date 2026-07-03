@@ -3,10 +3,10 @@ import { FaGraduationCap } from "react-icons/fa";
 import nitishResume from "../assets/pdf/Nitish_Resume.pdf";
 
 const stats = [
-  { label: "Years of Experience", value: "1+" },
   { label: "Projects Completed", value: "5+" },
   { label: "DSA Problems", value: "100+" },
-  { label: "Certifications", value: "4" },
+  { label: "Certifications", value: "5+" },
+  { label: "Graduation", value: "2027" },
 ];
 
 const education = [
@@ -57,9 +57,8 @@ const About = () => {
 
         <a
           href={nitishResume}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 bg-gradient-brand text-white font-medium px-6 py-3 rounded-full hover:shadow-glow transition-all duration-300 mb-16"
+          download="Nitish_Kumar_Resume.pdf"
+          className="inline-flex items-center gap-2 bg-gradient-brand text-white font-medium px-6 py-3 rounded-full hover:shadow-[0_4px_12px_rgba(245,158,11,0.18)] transition-all duration-300 mb-16"
         >
           <HiOutlineDownload /> Download Resume
         </a>

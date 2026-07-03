@@ -14,9 +14,9 @@ function CertificateModal({ certificate, onClose }) {
       >
         <div className="relative">
           <img
-            src={certificate.image}
+            src={certificate.photo}
             alt={certificate.title}
-            className="w-full h-72 object-cover"
+            className="w-full h-full object-cover"
           />
           <button
             onClick={onClose}

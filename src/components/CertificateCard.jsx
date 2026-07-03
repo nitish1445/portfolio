@@ -8,7 +8,7 @@ function CertificateCard({ certificate, onView }) {
     >
       <div className="relative h-44 overflow-hidden">
         <img
-          src={certificate.link}
+          src={certificate.photo}
           alt={certificate.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
