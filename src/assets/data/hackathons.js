@@ -1,4 +1,4 @@
-import navkalpanaImage from "../photos/hackathonNK.jpeg";
+import navkalpanaImage from "../photos/hackathonNk.jpeg";
 
 const hackathons = [
   {
