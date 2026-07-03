@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import logo from "../../public/logo.png";
+import logo from "../assets/photos/logo.png";
 
 function Footer() {
   return (
