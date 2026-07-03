@@ -1,4 +1,4 @@
-import java from "../resume/Java.png";
+import java from "../resume/java.png";
 import iot from "../resume/iot.png";
 import cloudComputing from "../resume/cloudComputing.png";
 import meshmerize from "../resume/meshmerize.png";
