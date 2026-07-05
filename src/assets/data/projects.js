@@ -6,7 +6,7 @@ const projects = [
       "An AI-powered adaptive fitness intelligence platform designed to provide personalized workout plans, diet recommendations, habit tracking, and AI coaching",
     tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS", "REST API"],
     github: "https://github.com/Rakhiraj1686/NavKalpana-RICR-NK-0029",
-    live: "https://healthup-ai.netlify.app",
+    live: "https://healthup-ai.vercel.app",
     image:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
   },
@@ -42,8 +42,9 @@ const projects = [
       "REST API",
       "Role-based Authentication",
     ],
-    github: "https://github.com/nitish1445/RICR-Web-Development/tree/main/CreaveIt",
-    live: null,
+    github:
+      "https://github.com/nitish1445/RICR-Web-Development/tree/main/CreaveIt",
+    live: "https://craveit-food.vercel.app/",
     image:
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
   },
@@ -62,7 +63,7 @@ const projects = [
       "OTP Verification",
     ],
     github: "https://github.com/nitish1445/shopify",
-    live: null,
+    live: "https://shopify-project-nitish.vercel.app/",
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
   },
