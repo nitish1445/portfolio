@@ -5,8 +5,8 @@ const projects = [
     description:
       "An AI-powered adaptive fitness intelligence platform designed to provide personalized workout plans, diet recommendations, habit tracking, and AI coaching",
     tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS", "REST API"],
-    github: "https://github.com/Rakhiraj1686/NavKalpana-RICR-NK-0029",
-    live: "https://healthup-ai.vercel.app",
+    github: "https://github.com/nitish1445/healthup-ai",
+    live: "https://healthup-ai-project.vercel.app",
     image:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
   },

@@ -1,15 +1,21 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/photos/logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="border-t border-border mt-12">
       <div className="max-w-6xl mx-auto px-6 py-2 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="hidden lg:block">
-          <img src={logo} alt="" className="h-6 w-6 rounde-ful object-cover" />
-        </div>
-        <p className="text-sm text-muted">
+        <Link to={"/"} className="hidden lg:block">
+          <img
+            src={logo}
+            alt=""
+            className="h-7 w-7 object-cover cursor-pointer"
+          />
+        </Link>
+
+        <p className="text-xs text-muted">
           © {new Date().getFullYear()} Nitish Kumar. All rights reserved.
         </p>
 

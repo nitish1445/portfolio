@@ -6,6 +6,7 @@ const hackathons = [
     title: "NavKalpana Hackathon",
     result: "Finalist",
     date: "Feb 2026",
+    urlDemo: "https://healthup-ai.vercel.app",
     description:
       "Built HealthUP FitAI, an AI-powered adaptive fitness intelligence platform that delivers personalized workout plans, diet recommendations, habit tracking, and AI coaching. The platform continuously adapts to user progress, health metrics, fatigue levels, and behavioral patterns to provide a personalized fitness experience.",
     image: navkalpanaImage,
@@ -16,6 +17,7 @@ const hackathons = [
     title: "HackNova",
     result: "3rd Runner Up",
     date: "Apr 2026",
+    urlDemo: "https://healthup-ai.vercel.app",
     description:
       "Built HealthUP FitAI, an AI-powered adaptive fitness intelligence platform that delivers personalized workout plans, diet recommendations, habit tracking, and AI coaching. The platform continuously adapts to user progress, health metrics, fatigue levels, and behavioral patterns to provide a personalized fitness experience.",
     image:
