@@ -3,7 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/photos/logo.png";
 import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="border-t border-border mt-12">
       <div className="max-w-6xl mx-auto px-6 py-2 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -54,6 +54,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

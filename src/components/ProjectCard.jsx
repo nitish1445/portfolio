@@ -1,6 +1,6 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-function ProjectCard({ project }) {
+const ProjectCard = ({ project }) => {
   return (
     <div className="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-glow transition-all duration-300">
       <div className="overflow-hidden h-48">
@@ -53,6 +53,6 @@ function ProjectCard({ project }) {
       </div>
     </div>
   );
-}
+};
 
 export default ProjectCard;

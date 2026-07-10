@@ -1,6 +1,6 @@
 import { FaSearchPlus } from "react-icons/fa";
 
-function CertificateCard({ certificate, onView }) {
+const CertificateCard = ({ certificate, onView }) => {
   return (
     <div
       onClick={() => onView(certificate)}
@@ -31,6 +31,6 @@ function CertificateCard({ certificate, onView }) {
       </div>
     </div>
   );
-}
+};
 
 export default CertificateCard;

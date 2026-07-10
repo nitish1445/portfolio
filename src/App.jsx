@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Hackathons from "./pages/Hackathons";
 import Certificates from "./pages/Certificates";
+import NotFound from "./pages/NotFound";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/skills" element={<Skills />} />
             <Route path="/hackathons" element={<Hackathons />} />
             <Route path="/certificates" element={<Certificates />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

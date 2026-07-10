@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 
-function CertificateModal({ certificate, onClose }) {
+const CertificateModal = ({ certificate, onClose }) => {
   if (!certificate) return null;
 
   return (
@@ -41,6 +41,6 @@ function CertificateModal({ certificate, onClose }) {
       </div>
     </div>
   );
-}
+};
 
 export default CertificateModal;

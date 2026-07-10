@@ -1,3 +1,4 @@
+import { AiFillThunderbolt } from "react-icons/ai";
 import {
   FaReact,
   FaNodeJs,
@@ -37,22 +38,22 @@ const skills = [
     items: [
       { name: "Java", icon: FaJava },
       { name: "JavaScript", icon: FaJs },
-      { name: "C Language", icon: FaLaptopCode },
+      // { name: "C Language", icon: FaLaptopCode },
     ],
   },
   {
     category: "Web & Backend",
     items: [
       { name: "React", icon: FaReact },
-      { name: "JavaScript", icon: FaJs },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "TailwindCSS", icon: SiTailwindcss },
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
+      { name: "JavaScript", icon: FaJs },
+      // { name: "TypeScript", icon: SiTypescript },
+      { name: "TailwindCSS", icon: SiTailwindcss },
       { name: "Node.js", icon: FaNodeJs },
       { name: "Express", icon: SiExpress },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "PostgreSQL", icon: SiPostgresql },
+      // { name: "PostgreSQL", icon: SiPostgresql },
     ],
   },
   ,
@@ -61,7 +62,7 @@ const skills = [
     items: [
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
-      { name: "Postman", icon: SiPostman },
+      { name: "Thunder Client", icon: AiFillThunderbolt },
       { name: "VSCode", icon: VscVscode },
       { name: "EclipseIDE", icon: SiEclipseide },
     ],

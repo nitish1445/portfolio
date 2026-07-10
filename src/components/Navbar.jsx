@@ -12,7 +12,7 @@ const navLinks = [
   { name: "Certificates", path: "/certificates" },
 ];
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -90,6 +90,6 @@ function Navbar() {
       )}
     </header>
   );
-}
+};
 
 export default Navbar;

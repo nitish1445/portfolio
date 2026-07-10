@@ -1,7 +1,7 @@
 import projects from "../assets/data/projects";
 import ProjectCard from "../components/ProjectCard";
 
-function Projects() {
+const Projects = () => {
   return (
     <>
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-14">
@@ -24,10 +24,12 @@ function Projects() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6">
-          <div className="text-center text-muted text-xs">A few more projects comming soon...</div>
+        <div className="text-center text-muted text-xs">
+          A few more projects comming soon...
+        </div>
       </section>
     </>
   );
-}
+};
 
 export default Projects;

@@ -1,7 +1,7 @@
 import { FaTrophy, FaLink } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 
-function HackathonCard({ hackathon }) {
+const HackathonCard = ({ hackathon }) => {
   return (
     <div className="flex flex-col gap-6 rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-accent/50 md:flex-row">
       <div className="relative h-44 overflow-hidden rounded-xl md:w-64 flex-shrink-0">
@@ -47,6 +47,6 @@ function HackathonCard({ hackathon }) {
       </div>
     </div>
   );
-}
+};
 
 export default HackathonCard;
