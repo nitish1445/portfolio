@@ -76,7 +76,7 @@ const projects = [
     tech: ["HTML", "Bootstrap", "Javascript", "OpenWeather API"],
     github:
       "https://github.com/nitish1445/RICR-Web-Development/tree/main/weatherApp",
-    live: null,
+    live: "https://weatherapp-nitish.netlify.app/",
     image:
       "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
   },
