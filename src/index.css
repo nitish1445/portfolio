@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,13 +9,14 @@ html {
 }
 
 body {
-  background-color: #0b0d12;
-  color: #f3f4f6;
+  background-color: #08080c;
+  color: #f4f2f7;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 ::selection {
-  background-color: #7c5cfc;
+  background-color: #6b5b95;
   color: #ffffff;
 }
 
@@ -22,14 +25,70 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0d12;
+  background: #08080c;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #242836;
+  background: #22222e;
+  border: 2px solid #08080c; /* Creates spacing */
   border-radius: 999px;
+  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c5cfc;
+  background: #6b5b95;
+}
+
+@layer components {
+  /* Fixed five-band aurora backdrop — soft, blurred, alive, not flat */
+  .aurora-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    overflow: hidden;
+    background: #08080c;
+  }
+  .aurora-band {
+    position: absolute;
+    top: -10%;
+    height: 120%;
+    width: 26%;
+    filter: blur(90px);
+    opacity: 0.55;
+    mix-blend-mode: screen;
+  }
+  .aurora-noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+  }
+
+  .text-gradient-brand {
+    background-image: linear-gradient(90deg, #ff6f61, #6b5b95, #92a8d1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .eyebrow {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
 }

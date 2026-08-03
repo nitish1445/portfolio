@@ -56,7 +56,6 @@ const skills = [
       // { name: "PostgreSQL", icon: SiPostgresql },
     ],
   },
-  ,
   {
     category: "IDE & Platforms",
     items: [

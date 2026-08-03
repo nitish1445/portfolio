@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   FaArrowRight,
   FaGithub,
@@ -6,106 +8,146 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineDownload } from "react-icons/hi";
 import profile from "../assets/photos/profile.png";
 import resume from "../assets/pdf/Nitish_Resume.pdf";
 
+const socials = [
+  { icon: <FaGithub />, link: "https://github.com/nitish1445" },
+  { icon: <FaCode />, link: "https://leetcode.com/u/nitish1445/" },
+  { icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/nitish1445/" },
+  { icon: <FaRegEnvelope />, link: "mailto:sarainitish@gmail.com" },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 22 },
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
+
 const Home = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute left-1/2 top-[-12rem] h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-accent/20 blur-[140px]" />
-      </div>
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pt-28 pb-4 lg:grid-cols-2">
-        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-          <div className="relative">
-            {/* Outer Ring */}
-            <div className="absolute inset-0 scale-110 rounded-full border border-white/10"></div>
-
-            {/* Glow */}
-            <div className="absolute inset-0 scale-110 rounded-full bg-accent/20 blur-3xl"></div>
-
-            <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-white/10 bg-card shadow-2xl sm:h-80 sm:w-80 lg:h-[430px] lg:w-[430px]">
-              <img
-                src={profile}
-                alt="Nitish Kumar"
-                className="h-full w-full object-cover"
-              />
+    <section className="relative min-h-[85vh] flex items-center px-5">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-2 py-10 lg:grid-cols-2">
+        {/* IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="order-1 flex justify-center lg:order-2 lg:justify-end"
+        >
+          <div className="relative animate-float">
+            <div className="relative">
+              <div className="rounded-full bg-gradient-to-br from-coral via-violet to-sky p-[3px] shadow-2xl">
+                <div className="h-64 w-64 sm:h-80 sm:w-80 lg:h-[380px] lg:w-[380px] rounded-full overflow-hidden bg-ink-900">
+                  <img
+                    src={profile}
+                    alt="Nitish Kumar"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Floating Badge */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-card/90 px-4 py-2 text-xs text-center font-medium text-white backdrop-blur-lg lg:-bottom-6">
-              🚀 Open to Opportunities
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full glass-strong px-4 py-2 text-xs text-center font-medium text-white whitespace-nowrap">
+              <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-moss animate-pulse" />
+              Open to Opportunities
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* CONTENT */}
         <div className="order-2 text-center lg:order-1 lg:text-left">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent-light">
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={0}
+            className="eyebrow mb-4 inline-flex items-center gap-2 text-coral"
+          >
             Hello, I'm
-          </p>
+          </motion.p>
 
-          <h1 className="mb-4 font-display text-4xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
+          <motion.h1
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={1}
+            className="mb-3 font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-white"
+          >
             Nitish Kumar
-          </h1>
+          </motion.h1>
 
-          <h2 className="mb-6 bg-gradient-brand bg-clip-text text-xl font-semibold text-transparent sm:text-2xl ">
-            Full Stack Developer
-          </h2>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={2}
+          >
+            <h2 className="mb-4 text-lg sm:text-xl font-semibold text-gradient-brand min-h-[2rem]">
+              Full Stack Developer
+            </h2>
+          </motion.div>
 
-          <p className="mx-auto mb-8 max-w-xl text-base leading-[1.3] text-muted lg:mx-0 lg:text-lg">
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={3}
+            className="mx-auto mb-9 max-w-xl text-base lg:leading-relaxed text-white/55 lg:mx-0 lg:text-lg"
+          >
             I build fast, scalable and beautiful web applications with React,
-            Node.js and MongoDB. Passionate about creating clean user
-            experiences and solving real-world problems through technology.
-          </p>
+            Node.js and MongoDB - turning complex problems into clean, elegant
+            products people enjoy using.
+          </motion.p>
 
-          {/* Buttons */}
-          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-            {/* Primary */}
-            <Link
-              to="/projects"
-              className="group inline-flex items-center justify-center gap-3 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-background transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_3px_9px_rgba(245,158,11,0.18)]"
-            >
-              <span>View Projects</span>
-              <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1" />
-            </Link>
-
-            {/* Secondary */}
-            <Link
-              to="/about"
-              className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/10 bg-white/5 px-7 py-3 text-sm font-medium text-text transition-all duration-300 backdrop-blur-md hover:border-accent/40 hover:bg-white/10 hover:text-accent"
-            >
-              <span>About Me</span>
-
-              <FaArrowRight className="transition-all duration-300 group-hover:translate-x-1" />
-            </Link>
-          </div>
-
-          {/* Social */}
-          <div className="flex justify-center gap-4 lg:justify-start">
-            {[
-              { icon: <FaGithub />, link: "https://github.com/nitish1445" },
-              { icon: <FaCode />, link: "https://leetcode.com/u/nitish1445/" },
-              {
-                icon: <FaLinkedinIn />,
-                link: "https://www.linkedin.com/in/nitish1445/",
-              },
-              { icon: <FaRegEnvelope />, link: "mailto:sarainitish@gmail.com" },
-            ].map((item, index) => (
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={5}
+            className="flex justify-center gap-3 lg:justify-start"
+          >
+            {socials.map((item, index) => (
               <a
                 key={index}
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full border border-white/10 bg-card text-[22px] text-muted transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:text-white"
+                className="flex h-11 w-11 lg:h-12 lg:w-12 items-center justify-center rounded-full glass text-lg text-white/60 transition-all duration-300 hover:-translate-y-1 hover:text-white hover:border-white/30"
               >
                 {item.icon}
               </a>
             ))}
-          </div>
+          </motion.div>
+
+          {/* CTA — full-width, luxe stacked buttons on mobile, inline on larger screens */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={4}
+            className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3.5 sm:gap-4 sm:justify-center lg:justify-start"
+          >
+            <Link
+              to="/projects"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-coral via-violet to-sky px-6 py-3.5 sm:py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-violet active:scale-[0.98]"
+            >
+              <span>View Projects</span>
+              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+
+            <Link
+              to="/about"
+              className="group inline-flex items-center justify-center gap-3 rounded-full glass px-6 py-3.5 sm:py-3 text-sm font-medium text-white transition-all duration-300 hover:border-white/30 active:scale-[0.98]"
+            >
+              <span>More About Me</span>
+              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
