@@ -1,15 +1,11 @@
-import { motion } from "framer-motion";
+import react from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectCard = ({ project, index = 0 }) => {
   const reversed = index % 2 === 1;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+    <div
       className={`group flex flex-col ${
         reversed ? "lg:flex-row-reverse" : "lg:flex-row"
       } gap-8 items-center rounded-[2rem] p-3 lg:p-4 relative`}
@@ -69,7 +65,7 @@ const ProjectCard = ({ project, index = 0 }) => {
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

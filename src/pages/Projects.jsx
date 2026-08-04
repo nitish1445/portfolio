@@ -6,7 +6,7 @@ import SectionTitle from "../components/SectionTitle";
 const Projects = () => {
   return (
     <>
-      <section className="max-w-6xl mx-auto px-5 sm:px-6 pt-16 lg:pt-20 pb-8">
+      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-10">
         <SectionTitle
           eyebrow="Portfolio"
           title="Projects I've Built"

@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import experiences from "../assets/data/experince";
 import { FaLink } from "react-icons/fa";
 
@@ -7,19 +6,12 @@ const ExperienceCard = () => {
   return (
     <div className="mx-auto max-w-6xl space-y-6 sm:space-y-10">
       {experiences.map((exp, index) => (
-        <motion.article
-          key={exp.id}
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-120px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="group relative glass rounded-2xl sm:rounded-[2rem] p-[1.5px]"
-        >
+        <article className="group relative glass rounded-2xl sm:rounded-[2rem] p-[1.5px]">
           <div className="relative p-4 sm:p-6 lg:p-8">
             {/* Title */}
             <div className="relative flex flex-col sm:flex-row sm:flex-wrap sm:items-start sm:justify-between gap-3 sm:gap-4">
               <div className="min-w-0">
-                <span className="eyebrow text-coral text-xs sm:text-sm">
+                <span className="eyebrow text-moss text-xs sm:text-sm">
                   {exp.type}
                 </span>
 
@@ -36,21 +28,11 @@ const ExperienceCard = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 sm:flex-wrap">
-                <span className="rounded-full bg-green-500/15 px-3 sm:px-4 py-1 sm:py-1.5 text-xs font-medium text-green-300 backdrop-blur whitespace-nowrap">
-                  ● {exp.status}
+              <div>
+                <span className="flex items-center gap-1 w-fit rounded-full bg-green-600/15 px-2 py-1 text-xs font-medium text-green-300/60 backdrop-blur whitespace-nowrap">
+                  <span className=" h-1.5 w-1.5 shrink-0 rounded-full bg-green-300/60" />
+                  {exp.status}
                 </span>
-
-                {exp.live && (
-                  <a
-                    href={exp.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-coral/20 backdrop-blur-xl text-white transition hover:bg-coral/60"
-                  >
-                    <FaLink className="text-xs" />
-                  </a>
-                )}
               </div>
             </div>
 
@@ -58,7 +40,7 @@ const ExperienceCard = () => {
             <div className="mt-5 sm:mt-7 grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
               {/* Left - Description */}
               <div>
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-coral">
+                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-sky">
                   Overview
                 </span>
 
@@ -71,7 +53,7 @@ const ExperienceCard = () => {
                   {exp.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="glass rounded-full px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-medium text-white/80"
+                      className="glass rounded-full px-3 py-0.5 text-[11px] sm:text-xs font-medium text-white/80"
                     >
                       {tech}
                     </span>
@@ -108,7 +90,7 @@ const ExperienceCard = () => {
                       key={i}
                       className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-3.5 sm:px-4 py-2 sm:py-1.5 transition-all duration-300 hover:border-coral/20 hover:bg-white/10"
                     >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-coral" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet" />
                       <p className="text-sm sm:text-base text-white/65">
                         {item}
                       </p>
@@ -134,7 +116,7 @@ const ExperienceCard = () => {
               )}
             </div>
           </div>
-        </motion.article>
+        </article>
       ))}
     </div>
   );

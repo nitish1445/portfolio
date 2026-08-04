@@ -27,7 +27,7 @@ const experiences = [
       "NodeMailer",
       "REST API",
     ],
-    status: "Live",
+    status: "Live Website",
     live: "https://vijaibhavalawfirm.com",
     color: "coral",
   },

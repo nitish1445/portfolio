@@ -41,10 +41,10 @@ const Footer = () => {
 
       <div className="flex flex-col lg:flex-row lg:items-end items-center justify-between gap-2 pt-2 pb-4 lg:px-28">
         <Link to={"/"} className="hidden lg:block text-center md:text-left">
-          <h1 className="font-display text-sm font-semibold text-white tracking-tight">
+          <h1 className="font-display text-sm font-semibold text-blush/80 tracking-tight">
             Nitish Kumar
           </h1>
-          <p className="text-[8px] uppercase tracking-[0.25em] text-coral">
+          <p className="text-[8px] uppercase tracking-[0.2em] text-sky">
             MERN Developer
           </p>
         </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={s.label}
-              className=" h-4.5 w-4.5 text-white/60 text-lg transition-all duration-300 hover:-translate-y-0.5 hover:text-white"
+              className="text-sm text-blush/60 lg:text-base transition-all duration-300 hover:-translate-y-0.5 hover:text-coral"
             >
               {s.icon}
             </a>

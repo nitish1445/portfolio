@@ -8,7 +8,7 @@ const projects = [
     github: "https://github.com/nitish1445/healthup-ai",
     live: "https://healthup-ai-project.vercel.app",
     image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const projects = [
     github: "https://github.com/nitish1445/chat-app",
     live: "https://converse-chatapp-project.vercel.app",
     image:
-      "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&q=80",
+      "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=800&q=80",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const projects = [
       "https://github.com/nitish1445/RICR-Web-Development/tree/main/CreaveIt",
     live: "https://craveit-food.vercel.app/",
     image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: 4,
@@ -67,9 +67,28 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
   },
-
   {
     id: 5,
+    title: "FleetOps",
+    description:
+      "A fleet management platform featuring role-based dashboards, vehicle and driver management, dispatch operations, maintenance scheduling, expense tracking, and real-time operational insights.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
+      "REST API",
+      "RBAC",
+    ],
+    github: "https://github.com/nitish1445/fleetops",
+    live: null,
+    image:
+      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: 6,
     title: "Weather App",
     description:
       "A minimal weather app with live forecasts, location search, and smooth animated transitions between states. It fetches data from the OpenWeather API and displays it in a user-friendly interface.",
@@ -79,18 +98,6 @@ const projects = [
     live: "https://weatherapp-nitish.netlify.app/",
     image:
       "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
-  },
-  {
-    id: 6,
-    title: "A Beginners Assignment",
-    description:
-      "A collection of projects representing my learning journey, showcasing various experiments and applications that reflect my growth in web development, with a strong focus on JavaScript logic and problem-solving.",
-    tech: ["HTML", "CSS", "Javascript", "Bootstrap", "TailwindCSS"],
-    github:
-      "https://github.com/nitish1445/RICR-Web-Development/tree/main/assignment",
-    live: null,
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
   },
 ];
 

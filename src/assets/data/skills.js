@@ -71,17 +71,17 @@ const skills = [
     items: [
       { name: "DSA", icon: FaLaptopCode },
       { name: "OOPs", icon: FaLaptopCode },
-      { name: "REST Architecture", icon: FaLaptopCode },
       { name: "DBMS", icon: FaDatabase },
       { name: "System Design", icon: FaLaptopCode },
+      { name: "REST Architecture", icon: FaLaptopCode },
     ],
   },
   {
     category: "Soft Skills",
     items: [
-      { name: "Leadership Quality", icon: FaUsers },
-      { name: "Communication", icon: FaComments },
       { name: "Problem Solving", icon: FaLightbulb },
+      { name: "Communication", icon: FaComments },
+      { name: "Leadership Quality", icon: FaUsers },
       { name: "Team Collaboration", icon: FaUserFriends },
       { name: "Time Management", icon: FaClock },
     ],

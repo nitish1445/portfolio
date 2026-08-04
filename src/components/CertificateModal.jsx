@@ -1,22 +1,15 @@
-import { AnimatePresence, motion } from "framer-motion";
+import react from "react";
 import { FaTimes } from "react-icons/fa";
 
 const CertificateModal = ({ certificate, onClose }) => {
   return (
-    <AnimatePresence>
+    <>
       {certificate && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+        <div
           onClick={onClose}
           className="fixed inset-0 z-50 bg-ink/80 backdrop-blur-md flex items-center justify-center p-6"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 16 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.92, y: 16 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          <div
             onClick={(e) => e.stopPropagation()}
             className="glass-strong rounded-2xl max-w-2xl w-full overflow-hidden"
           >
@@ -28,7 +21,7 @@ const CertificateModal = ({ certificate, onClose }) => {
               />
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 glass-strong text-white p-2.5 rounded-full hover:bg-white/20 transition-colors duration-200"
+                className="absolute top-4 right-4 bg-blush text-white p-2.5 rounded-full hover:bg-coral transition-colors duration-200"
                 aria-label="Close"
               >
                 <FaTimes />
@@ -47,10 +40,10 @@ const CertificateModal = ({ certificate, onClose }) => {
               </div>
               <p className="text-xs text-white/35 mt-1">{certificate.date}</p>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

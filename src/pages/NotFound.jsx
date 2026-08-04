@@ -32,7 +32,7 @@ const NotFound = () => {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
             to="/"
-            className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-coral via-violet to-sky px-7 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-violet"
+            className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-coral via-violet to-sky px-7 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow hover:shadow-violet"
           >
             <GoHomeFill size={18} />
             <span className="text-[15px] font-semibold text-white">

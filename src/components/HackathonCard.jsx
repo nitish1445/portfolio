@@ -1,16 +1,10 @@
-import { motion } from "framer-motion";
+import react from "react";
 import { FaTrophy, FaLink } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 
 const HackathonCard = ({ hackathon, index = 0 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, delay: index * 0.05 }}
-      className="relative md:pl-14"
-    >
+    <div className="relative md:pl-14">
       <span className="hidden absolute left-0 top-2 md:flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-coral via-violet to-sky text-white text-xs shadow-glow-violet">
         <FaTrophy />
       </span>
@@ -26,7 +20,7 @@ const HackathonCard = ({ hackathon, index = 0 }) => {
             href={hackathon.urlDemo}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute top-2 right-2 z-10 flex h-8 w-8 items-center justify-center rounded-full glass-strong text-white hover:text-sky transition-all duration-300"
+            className="absolute top-2 cursor-pointer right-2 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-blush text-white hover:text-coral transition-all duration-300"
           >
             <FaLink className="text-sm" />
           </a>
@@ -41,11 +35,11 @@ const HackathonCard = ({ hackathon, index = 0 }) => {
 
           <div className="mb-3 flex flex-wrap items-baseline gap-3 text-sm lg:gap-4">
             <div className="flex items-center gap-2 font-medium text-moss">
-              <FaTrophy className="text-moss" />
+              <FaTrophy className="text-moss text-xs" />
               {hackathon.result}
             </div>
             <div className="flex items-center gap-2 font-medium text-sky">
-              <HiBuildingOffice2 className="text-sky" />
+              <HiBuildingOffice2 className="text-sky text-xs" />
               {hackathon.organizer}
             </div>
           </div>
@@ -55,7 +49,7 @@ const HackathonCard = ({ hackathon, index = 0 }) => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

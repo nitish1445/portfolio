@@ -10,7 +10,7 @@ const Certificates = () => {
 
   return (
     <>
-      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16 lg:py-20">
+      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-10">
         <SectionTitle
           eyebrow="Learning"
           title="Certificates"

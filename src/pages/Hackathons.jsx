@@ -6,7 +6,7 @@ import SectionTitle from "../components/SectionTitle";
 const Hackathons = () => {
   return (
     <>
-      <section className="max-w-5xl mx-auto px-5 sm:px-6 py-16 lg:py-20 ">
+      <section className="max-w-5xl mx-auto px-5 sm:px-6 py-10 ">
         <SectionTitle
           eyebrow="Achievements"
           title="Hackathons"

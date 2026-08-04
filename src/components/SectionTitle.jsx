@@ -1,19 +1,15 @@
-import { motion } from "framer-motion";
+import react from "react";
 
 const SectionTitle = ({ eyebrow, title, description, align = "center" }) => {
   const alignment =
-    align === "left" ? "text-left items-start" : "text-center items-center mx-auto";
+    align === "left"
+      ? "text-left items-start"
+      : "text-center items-center mx-auto";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`flex flex-col max-w-2xl mb-14 ${alignment}`}
-    >
+    <div className={`flex flex-col max-w-2xl mb-14 ${alignment}`}>
       {eyebrow && (
-        <span className="eyebrow text-coral mb-3 flex items-center gap-2">
+        <span className="eyebrow text-sky mb-3 flex items-center gap-2">
           {/* <span className="h-px w-6 bg-brand-line" /> */}
           {eyebrow}
         </span>
@@ -26,7 +22,7 @@ const SectionTitle = ({ eyebrow, title, description, align = "center" }) => {
           {description}
         </p>
       )}
-    </motion.div>
+    </div>
   );
 };
 

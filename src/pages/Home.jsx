@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import {
   FaArrowRight,
   FaGithub,
@@ -19,26 +18,62 @@ const socials = [
   { icon: <FaRegEnvelope />, link: "mailto:sarainitish@gmail.com" },
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 22 },
-  show: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-  }),
+const roles = [
+  "Full Stack Developer",
+  "Specailized in MERN",
+  "Team Collaborations",
+  "Problem Solver",
+];
+
+const TypedRole = () => {
+  const [roleIndex, setRoleIndex] = useState(
+    () => Math.floor(Math.random() * roles.length),
+  );
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    const isTypingComplete = text === currentRole;
+    const isDeletionComplete = text === "";
+    const delay = isDeleting ? 60 : 160;
+
+    if (!isDeleting && isTypingComplete) {
+      const timeout = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(timeout);
+    }
+
+    if (isDeleting && isDeletionComplete) {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+      return undefined;
+    }
+
+    const timeout = setTimeout(() => {
+      setText((currentText) =>
+        isDeleting
+          ? currentText.slice(0, currentText.length - 1)
+          : currentRole.slice(0, currentText.length + 1),
+      );
+    }, delay);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, roleIndex]);
+
+  return (
+    <h2 className="mb-4 min-h-[1.8rem] text-[17px] sm:text-[19px] font-semibold text-gradient-brand">
+      {text}
+      <span className="ml-1 inline-block text-blush/60">|</span>
+    </h2>
+  );
 };
 
 const Home = () => {
   return (
     <section className="relative min-h-[85vh] flex items-center px-5">
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-2 py-10 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-8 lg:gap-14 px-2 py-10 lg:grid-cols-2">
         {/* IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="order-1 flex justify-center lg:order-2 lg:justify-end"
-        >
+        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <div className="relative animate-float">
             <div className="relative">
               <div className="rounded-full bg-gradient-to-br from-coral via-violet to-sky p-[3px] shadow-2xl">
@@ -57,84 +92,47 @@ const Home = () => {
               Open to Opportunities
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CONTENT */}
         <div className="order-2 text-center lg:order-1 lg:text-left">
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0}
-            className="eyebrow mb-4 inline-flex items-center gap-2 text-coral"
-          >
+          <p className="eyebrow mb-3 inline-flex items-center gap-2 text-sky">
             Hello, I'm
-          </motion.p>
+          </p>
 
-          <motion.h1
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={1}
-            className="mb-3 font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-white"
-          >
+          <h1 className="mb-2.5 font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-white">
             Nitish Kumar
-          </motion.h1>
+          </h1>
 
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={2}
-          >
-            <h2 className="mb-4 text-lg sm:text-xl font-semibold text-gradient-brand min-h-[2rem]">
-              Full Stack Developer
-            </h2>
-          </motion.div>
+          <div>
+            <TypedRole />
+          </div>
 
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={3}
-            className="mx-auto mb-9 max-w-xl text-base lg:leading-relaxed text-white/55 lg:mx-0 lg:text-lg"
-          >
+          <p className="mx-auto mb-6 max-w-xl text-base leading-5 lg:leading-relaxed text-white/55 lg:mx-0 lg:text-lg">
             I build fast, scalable and beautiful web applications with React,
-            Node.js and MongoDB - turning complex problems into clean, elegant
-            products people enjoy using.
-          </motion.p>
+            Node.js, Express.js and MongoDB - turning complex problems into
+            clean, elegant products people enjoy using.
+          </p>
 
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={5}
-            className="flex justify-center gap-3 lg:justify-start"
-          >
+          <div className="flex justify-center gap-3 lg:justify-start">
             {socials.map((item, index) => (
               <a
                 key={index}
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-11 w-11 lg:h-12 lg:w-12 items-center justify-center rounded-full glass text-lg text-white/60 transition-all duration-300 hover:-translate-y-1 hover:text-white hover:border-white/30"
+                className="flex h-11 w-11 lg:h-12 lg:w-12 items-center justify-center rounded-full glass text-lg text-blush/80 transition-all duration-300 hover:-translate-y-1 hover:text-coral hover:border-coral/30"
               >
                 {item.icon}
               </a>
             ))}
-          </motion.div>
+          </div>
 
           {/* CTA — full-width, luxe stacked buttons on mobile, inline on larger screens */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={4}
-            className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3.5 sm:gap-4 sm:justify-center lg:justify-start"
-          >
+          <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-3.5 sm:gap-4 sm:justify-center lg:justify-start">
             <Link
               to="/projects"
-              className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-coral via-violet to-sky px-6 py-3.5 sm:py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-violet active:scale-[0.98]"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-coral via-violet to-sky px-6 py-3.5 sm:py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow hover:shadow-violet active:scale-[0.98]"
             >
               <span>View Projects</span>
               <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -147,7 +145,7 @@ const Home = () => {
               <span>More About Me</span>
               <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

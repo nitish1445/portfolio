@@ -1,13 +1,9 @@
-import { motion } from "framer-motion";
+import react from "react";
 import { FaSearchPlus, FaCertificate } from "react-icons/fa";
 
 const CertificateCard = ({ certificate, onView, index = 0 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: index * 0.06 }}
+    <div
       onClick={() => certificate.photo && onView(certificate)}
       className={`group ${certificate.photo ? "cursor-pointer" : ""} glass rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:border-white/30`}
     >
@@ -42,7 +38,7 @@ const CertificateCard = ({ certificate, onView, index = 0 }) => {
         </div>
         <p className="mt-1 text-xs text-white/35">{certificate.date}</p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

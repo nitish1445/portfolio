@@ -14,7 +14,7 @@ const Skills = () => {
 
   return (
     <>
-      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16 lg:py-20">
+      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-10">
         <SectionTitle
           eyebrow="What I Know"
           title="Skills & Technologies"
@@ -37,7 +37,6 @@ const Skills = () => {
                 <motion.span
                   layoutId="skill-pill"
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-coral via-violet to-sky"
-                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
               <span className="relative z-10">{cat}</span>
@@ -46,12 +45,8 @@ const Skills = () => {
         </div>
 
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={active}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.35 }}
             className="flex flex-col gap-16"
           >
             {groups.map((group) => (
@@ -69,14 +64,10 @@ const Skills = () => {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: i * 0.04 }}
-                        className="group flex items-center gap-3 rounded-xl glass p-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-white/30"
+                        className="group flex items-center gap-3 rounded-xl glass p-3.5 transition-all duration-300 hover:border-white/30"
                       >
-                        {Icon && (
-                          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-lg text-sky transition-colors duration-300 group-hover:text-coral">
-                            <Icon />
-                          </span>
-                        )}
-                        <span className="text-xs lg:text-sm font-medium text-white">
+                        {Icon && <Icon className="text-moss/80" />}
+                        <span className="text-xs lg:text-sm font-medium text-blush/90">
                           {skill.name}
                         </span>
                       </motion.div>
@@ -85,7 +76,7 @@ const Skills = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </AnimatePresence>
       </section>
 
