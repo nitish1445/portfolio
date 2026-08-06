@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { HiOutlineDownload } from "react-icons/hi";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
@@ -6,6 +6,9 @@ import { SiTailwindcss, SiMongodb, SiExpress } from "react-icons/si";
 import SectionTitle from "../components/SectionTitle";
 import nitishResume from "../assets/pdf/Nitish_Resume.pdf";
 import Footer from "../components/Footer";
+import profile from "../assets/photos/profile.png";
+import hackNK from "../assets/photos/hackathonNk.jpeg";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const stats = [
   { label: "Projects Built", value: "5+" },
@@ -46,19 +49,25 @@ const interests = [
   "Playing Cricket",
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
-
 const About = () => {
+  const galleryImages = [
+    { src: profile, caption: "Meet the Developer" },
+    { src: hackNK, caption: "Hackathon Journey" },
+  ];
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % galleryImages.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [galleryImages.length]);
+
   return (
     <>
-      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16 lg:py-20">
+      {/* Main Section */}
+
+      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           {/* LEFT — editorial intro */}
           <div>
@@ -79,17 +88,20 @@ const About = () => {
             </p>
             <a
               href={nitishResume}
-              download="Nitish_Kumar_Resume.pdf"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-coral via-violet to-sky text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-2 rounded-xl bg-coral px-6 py-3 font-display text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_15px_-8px_rgba(255,111,97,0.6)]"
             >
-              <HiOutlineDownload /> Download Resume
+              View Resume{" "}
+              <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
 
           {/* RIGHT — floating tech + quick facts glass card */}
-          <div className="space-y-10 hidden lg:block">
-            <div className="flex items-start gap-3">
+          <div className="space-y-10">
+            <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left gap-2 justify-center lg:justify-start">
               <span className="text-coral text-2xl leading-none">❝</span>
+
               <blockquote className="font-display lg:text-xl font-semibold text-white italic">
                 Every project is an opportunity to transform an idea into an
                 experience people genuinely enjoy using.
@@ -191,6 +203,82 @@ const About = () => {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photos Gallery */}
+
+      <section className="max-w-5xl mx-auto px-5 sm:px-6 py-12 lg:pb-16">
+        {/* Section Header */}
+
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <span className="text-sm font-semibold uppercase tracking-[0.28em] text-coral">
+            Gallery
+          </span>
+
+          <h2 className="mt-5 text-2xl font-bold tracking-tight text-white md:text-4xl">
+            Moments Behind
+            <span className="bg-gradient-to-r from-coral via-violet to-sky bg-clip-text text-transparent">
+              {" "}
+              The Work
+            </span>
+          </h2>
+        </div>
+
+        {/* Desktop — two editorial photographs */}
+        <div className="hidden md:grid grid-cols-2 gap-6">
+          {galleryImages.map((img) => (
+            <figure
+              key={img.caption}
+              className="group relative overflow-hidden rounded-[32px] aspect-square"
+            >
+              <img
+                src={img.src}
+                alt={img.caption}
+                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/0 to-transparent" />
+              <figcaption className="absolute bottom-5 left-5 text-blush tracking-[0.12em] font-display text-base font-semibold uppercase">
+                {img.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        {/* Mobile — auto-sliding single image */}
+        <div className="md:hidden relative overflow-hidden rounded-[16px] aspect-[3/4]">
+          <div
+            className="flex h-full transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+          >
+            {galleryImages.map((img) => (
+              <div
+                key={img.caption}
+                className="relative h-full w-full shrink-0"
+              >
+                <img
+                  src={img.src}
+                  alt={img.caption}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/0 to-transparent" />
+                <figcaption className="absolute bottom-5 left-5 text-blush tracking-[0.12 em] font-display text-base font-semibold uppercase">
+                  {img.caption}
+                </figcaption>
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute bottom-4 right-5 flex gap-1.5">
+            {galleryImages.map((_, i) => (
+              <span
+                key={i}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === activeSlide ? "w-5 bg-white" : "w-1.5 bg-white/50"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,3 @@
-import vijayBhavaLawFirm from "../photos/vijaibhava.png";
-
 const experiences = [
   {
     id: 1,
@@ -8,7 +6,7 @@ const experiences = [
     company: "Vijay Bhava Law Firm",
     duration: "Client Project",
     type: "Real-World Project",
-    image: vijayBhavaLawFirm,
+    image: null,
     description:
       "Designed and developed a modern, responsive law firm website focused on professionalism, performance, and user experience. Delivered a production-ready solution with optimized SEO, smooth animations, and a scalable React architecture.",
     achievements: [

@@ -105,15 +105,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href={resume}
-          target="_blank"
-          rel="noreferrer"
-          className="hidden lg:inline-flex items-center gap-1.5 text-sm font-semibold px-5 py-2 rounded-full bg-gradient-to-r from-coral via-violet to-sky text-white transition-transform duration-300 hover:scale-[1.04]"
-        >
-          View Resume <HiArrowUpRight />
-        </a>
-
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-white text-2xl p-1"
@@ -148,15 +139,6 @@ const Navbar = () => {
                 </NavLink>
               );
             })}
-
-            <a
-              href={resume}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex items-center justify-center gap-2 text-sm font-semibold px-5 py-3 rounded-full bg-gradient-to-r from-coral via-violet to-sky text-white"
-            >
-              Let's Connect <HiArrowUpRight />
-            </a>
           </div>
         )}
       </div>
