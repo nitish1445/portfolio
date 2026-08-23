@@ -44,6 +44,22 @@ const certificates = [
     date: "Feb 2026",
     photo: null,
   },
+  {
+    id: 6,
+    title: "Internet of Things (IoT)",
+    issuer: "Indeyes",
+    category: "Hands-on Workshop",
+    date: "July 2024",
+    photo: null,
+  },
+  {
+    id: 7,
+    title: "Robotics and Automation",
+    issuer: "Innovations for You Group, Bhopal | IES University | The Institution of Engineers",
+    category: "Hands-on Workshop",
+    date: "Dec 2023",
+    photo: null,
+  },
 ];
 
 export default certificates;

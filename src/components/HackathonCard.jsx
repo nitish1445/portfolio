@@ -16,14 +16,6 @@ const HackathonCard = ({ hackathon, index = 0 }) => {
             alt={hackathon.title}
             className="h-full w-full object-cover"
           />
-          <a
-            href={hackathon.urlDemo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute top-2 cursor-pointer right-2 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-blush text-white hover:text-coral transition-all duration-300"
-          >
-            <FaLink className="text-sm" />
-          </a>
         </div>
         <div className="flex-1">
           <div className="mb-2 flex flex-wrap items-center justify-between gap-2">

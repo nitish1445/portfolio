@@ -30,6 +30,25 @@ const projects = [
   },
   {
     id: 3,
+    title: "EduTech AI :- An AI-Powered Learning Platform",
+    description:
+      "An AI-powered learning platform that offers personalized learning paths, interactive quizzes, and real-time feedback. It leverages AI algorithms to adapt content based on user performance and preferences.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
+      "REST API",
+    ],
+    github: "https://github.com/nitish1445/HackInMotion-RICR-HIM-1166",
+    live: "https://edutech-hackathon-project.vercel.app/",
+    image:
+      "https://www.trendflash.net/storage/posts/zbHVmMbAfbL4jDo5v3FfFuwg8soTsDh4KfIys3yH.jpg",
+  },
+  {
+    id: 4,
     title: "CraveIT - A Food Ordering App",
     description:
       "A food ordering application with a user-friendly interface, allowing users to browse menus, place orders, and track delivery status in real-time.",
@@ -49,7 +68,7 @@ const projects = [
       "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: 4,
+    id: 5,
     title: "Shopify",
     description:
       "A full-featured e-commerce platform with OTP-based authentication, shopping cart, secure checkout, and an admin dashboard for managing orders and inventory.",
@@ -68,7 +87,7 @@ const projects = [
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
   },
   {
-    id: 5,
+    id: 6,
     title: "FleetOps",
     description:
       "A fleet management platform featuring role-based dashboards, vehicle and driver management, dispatch operations, maintenance scheduling, expense tracking, and real-time operational insights.",
@@ -88,7 +107,7 @@ const projects = [
       "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: 6,
+    id: 7,
     title: "Weather App",
     description:
       "A minimal weather app with live forecasts, location search, and smooth animated transitions between states. It fetches data from the OpenWeather API and displays it in a user-friendly interface.",
