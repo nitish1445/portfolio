@@ -1,20 +1,29 @@
 const projects = [
   {
     id: 1,
-    title: "HealthUP - Adaptive Fitness Intelligence Platform",
+    title: "CraveIT - A Food Ordering App",
     description:
-      "An AI-powered adaptive fitness intelligence platform designed to provide personalized workout plans, diet recommendations, habit tracking, and AI coaching",
-    tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS", "REST API"],
-    github: "https://github.com/nitish1445/healthup-ai",
-    live: "https://healthup-ai-project.vercel.app",
+      "A food ordering application with a user-friendly interface, allowing users to browse menus, place orders, and track delivery status in real-time.",
+    tech: [
+      "React",
+      "Tailwind",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "REST API",
+      "Role-based Authentication",
+    ],
+    github:
+      "https://github.com/nitish1445/RICR-Web-Development/tree/main/CreaveIt",
+    live: "https://craveit-food.vercel.app/",
     image:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+      "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: 2,
     title: "Converse :- A Real-Time Chat Application",
     description:
-      "A real-time chat application with private messaging, photo sharing, online status indicators, and a responsive user interface. It works seamlessly across devices, providing a smooth and engaging chat experience.",
+      "A real-time chat application with private messaging, online status indicators, and a responsive user interface. It works seamlessly across devices, providing a smooth and engaging chat experience.",
     tech: [
       "React",
       "Socket.io",
@@ -49,23 +58,14 @@ const projects = [
   },
   {
     id: 4,
-    title: "CraveIT - A Food Ordering App",
+    title: "HealthUP - Adaptive Fitness Intelligence Platform",
     description:
-      "A food ordering application with a user-friendly interface, allowing users to browse menus, place orders, and track delivery status in real-time.",
-    tech: [
-      "React",
-      "Tailwind",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "REST API",
-      "Role-based Authentication",
-    ],
-    github:
-      "https://github.com/nitish1445/RICR-Web-Development/tree/main/CreaveIt",
-    live: "https://craveit-food.vercel.app/",
+      "An AI-powered adaptive fitness intelligence platform designed to provide personalized workout plans, diet recommendations, habit tracking, and AI coaching",
+    tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS", "REST API"],
+    github: "https://github.com/nitish1445/healthup-ai",
+    live: "https://healthup-ai-project.vercel.app",
     image:
-      "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
   },
   {
     id: 5,
