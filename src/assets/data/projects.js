@@ -21,6 +21,17 @@ const projects = [
   },
   {
     id: 2,
+    title: "HealthUP - Fitness Intelligence Platform",
+    description:
+      "An adaptive fitness intelligence platform designed to provide personalized workout plans, diet recommendations, habit tracking, and AI coaching.",
+    tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS", "REST API"],
+    github: "https://github.com/nitish1445/healthup-ai",
+    live: "https://healthup-ai-project.vercel.app",
+    image:
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+  },
+  {
+    id: 3,
     title: "Converse :- A Real-Time Chat Application",
     description:
       "A real-time chat application with private messaging, online status indicators, and a responsive user interface. It works seamlessly across devices, providing a smooth and engaging chat experience.",
@@ -38,7 +49,7 @@ const projects = [
       "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=800&q=80",
   },
   {
-    id: 3,
+    id: 4,
     title: "EduTech AI :- An AI-Powered Learning Platform",
     description:
       "An AI-powered learning platform that offers personalized learning paths, interactive quizzes, and real-time feedback. It leverages AI algorithms to adapt content based on user performance and preferences.",
@@ -55,17 +66,6 @@ const projects = [
     live: "https://edutech-hackathon-project.vercel.app/",
     image:
       "https://www.trendflash.net/storage/posts/zbHVmMbAfbL4jDo5v3FfFuwg8soTsDh4KfIys3yH.jpg",
-  },
-  {
-    id: 4,
-    title: "HealthUP - Adaptive Fitness Intelligence Platform",
-    description:
-      "An AI-powered adaptive fitness intelligence platform designed to provide personalized workout plans, diet recommendations, habit tracking, and AI coaching",
-    tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS", "REST API"],
-    github: "https://github.com/nitish1445/healthup-ai",
-    live: "https://healthup-ai-project.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
   },
   {
     id: 5,
@@ -88,26 +88,6 @@ const projects = [
   },
   {
     id: 6,
-    title: "FleetOps",
-    description:
-      "A fleet management platform featuring role-based dashboards, vehicle and driver management, dispatch operations, maintenance scheduling, expense tracking, and real-time operational insights.",
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "JWT",
-      "Tailwind CSS",
-      "REST API",
-      "RBAC",
-    ],
-    github: "https://github.com/nitish1445/fleetops",
-    live: null,
-    image:
-      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: 7,
     title: "Weather App",
     description:
       "A minimal weather app with live forecasts, location search, and smooth animated transitions between states. It fetches data from the OpenWeather API and displays it in a user-friendly interface.",

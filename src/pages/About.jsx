@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-import { HiOutlineDownload } from "react-icons/hi";
 import { FaGraduationCap } from "react-icons/fa";
-import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiExpress } from "react-icons/si";
-import SectionTitle from "../components/SectionTitle";
 import nitishResume from "../assets/pdf/Nitish_Resume.pdf";
 import Footer from "../components/Footer";
 import profile from "../assets/photos/profile.png";
@@ -11,9 +7,9 @@ import hackNK from "../assets/photos/hackathonNk.jpeg";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const stats = [
-  { label: "Projects Built", value: "5+" },
+  { label: "Projects Built", value: "6+" },
   { label: "DSA Problems", value: "100+" },
-  { label: "Certifications", value: "5+" },
+  { label: "Certifications", value: "6+" },
   { label: "Graduating", value: "2027" },
 ];
 
